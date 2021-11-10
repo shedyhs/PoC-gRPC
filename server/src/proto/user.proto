@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package user;
+
+import "google/protobuf/empty.proto";
+
+message User {
+  string name = 1;
+  string email = 2;
+  string password = 3;
+}
+
+service UserService {
+  rpc CreateUser(User) returns (google.protobuf.Empty);
+  // rpc GetUser(GetUserRequest) returns (User);
+  // rpc UpdateUser(UpdateUserRequest) returns (User);
+  // rpc DeleteUser(DeleteUserRequest) returns (Empty);
+}
